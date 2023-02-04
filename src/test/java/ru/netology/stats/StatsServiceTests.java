@@ -1,35 +1,37 @@
 package ru.netology.stats;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 public class StatsServiceTests {
     @Test
-    public void testForSumSales () {
-        StatsService service= new StatsService();
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+    public void testForSumSales() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.sumSeles(sales);
-        long expected = 8 + 15 + 13 +15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
+        long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         assertEquals(actual, expected);
     }
 
     @Test
-    public void testAverageSumSales () {
-        StatsService service= new StatsService();
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+    public void testAverageSumSales() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.averageSumSales(sales);
-        long expected = (8 + 15 + 13 +15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
+        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         assertEquals(actual, expected);
     }
 
     @Test
-    public void testForMaxSales () {
+    public void testForMaxSales() {
         StatsService service = new StatsService();
 
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.maxSales(sales);
         long expected = 8;
@@ -38,10 +40,10 @@ public class StatsServiceTests {
     }
 
     @Test
-    public void testForMinSales () {
+    public void testForMinSales() {
         StatsService service = new StatsService();
 
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.minSales(sales);
         long expected = 9;
@@ -50,10 +52,10 @@ public class StatsServiceTests {
     }
 
     @Test
-    public void testForMounthBellowAverage () {
+    public void testForMounthBellowAverage() {
         StatsService service = new StatsService();
 
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.mounthBellowAverage(sales);
         long expected = 5;
@@ -62,10 +64,10 @@ public class StatsServiceTests {
     }
 
     @Test
-    public void testForMounthUpperAverage () {
+    public void testForMounthUpperAverage() {
         StatsService service = new StatsService();
 
-        long [] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.mounthUpperAverage(sales);
         long expected = 5;
